@@ -1,0 +1,52 @@
+{%extends 'base_htmx.html'%}
+{% block main %}
+<div class="container-fluid">
+    {%include 'nav.html'%}
+
+    {%include 'searchform.html'%}
+    <a href='{%url 'journal-add'%}' class='btn btn-success btn-sm'>Add new Journal</a>
+
+    <!-- <a hx-get='{%url 'journal-add'%}' hx-target='#formtarget' class='btn btn-success btn-sm'>Add new Journal</a> -->
+</div>
+
+<div class="col-md-12">
+    <div class="card"> <!-- id="formtarget"  hx-swap="outerHTML"-->
+      <div class="card-header">
+        <h4 class="card-title"> Transaction Journal</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <tr>
+                <th>
+                    index
+                  </th>
+                <th>
+                Date
+              </th>
+              <th>
+                Credit Account
+              </th>
+              <th>
+                Debit Account
+              </th>
+              <th class="text-center">
+                Description
+              </th>
+              <th class="text-center">
+                Amount
+              </th>
+              <th class="text-center">
+                Action
+              </th>
+            </tr></thead>
+            
+            {% include 'journal/journals_list.html'%}
+
+        </table>
+    </div>
+  </div>
+</div>
+</div>
+{%endblock%}

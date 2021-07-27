@@ -1,0 +1,47 @@
+{%extends 'base_htmx.html'%}
+{% block main %}
+<div class="container-fluid">
+    {%include 'nav.html'%}
+    <a href='{%url 'debtor-add'%}' class='btn btn-success btn-sm'>Add new Debtor</a>
+
+    <!-- <a hx-get='{%url 'journal-add'%}' hx-target='#formtarget' class='btn btn-success btn-sm'>Add new Journal</a> -->
+</div>
+
+<div class="col-md-12">
+    <div class="card"> <!-- id="formtarget"  hx-swap="outerHTML"-->
+      <div class="card-header">
+        <h4 class="card-title"> List of Debtors </h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <tr>
+                <th style="">
+                    index
+                  </th>
+              <th class="text-center">
+                Name
+              </th>
+              <th class="text-center">
+               Phone
+              </th>
+              <th class="text-center">
+               Services rendered
+              </th>
+              <th class="text-center">
+                Location
+              </th>
+              <th class="text-center">
+                Action
+              </th>
+            </tr></thead>
+            
+            {% include 'debtors/debtors_list.html'%}
+
+        </table>
+    </div>
+  </div>
+</div>
+</div>
+{%endblock%}

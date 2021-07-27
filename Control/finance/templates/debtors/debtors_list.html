@@ -1,0 +1,24 @@
+<tbody
+  id="journals"
+  hx-confirm="Are you sure you want to delete this Debtor ?"
+  hx-target="#journals"
+  hx-swap="outerHTML"
+>
+  {%for debtor in object_list%}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{debtor.name}}</td>
+    <td>{{debtor.phone}}</td>
+    <td>{{debtor.service_rendered}}</td>
+    <td>{{debtor.location}}</td>
+    <td>
+      <a
+        class="btn btn-danger btn-sm mr-2 hover:text-gray-600"
+        hx-delete="{% url 'delete_debtor' debtor.slug %}"
+      >
+        Delete?
+      </a>
+    </td>
+  </tr>
+  {%endfor%}
+</tbody>

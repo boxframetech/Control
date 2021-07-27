@@ -1,0 +1,25 @@
+<tbody
+  id="journals"
+  hx-confirm="Are you sure you want to delete this journal ?"
+  hx-target="#journals"
+  hx-swap="outerHTML"
+>
+  {%for journal in object_list%}
+  <tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{journal.transaction_date}}</td>
+    <td>{{journal.cr_account}}</td>
+    <td>{{journal.dr_account}}</td>
+    <td>{{journal.description}}</td>
+    <td>{{journal.amount}}</td>
+    <td>
+      <a
+        class="btn btn-danger btn-sm mr-2 hover:text-gray-600"
+        hx-delete="{% url 'delete_journal' journal.id %}"
+      >
+        Delete?
+      </a>
+    </td>
+  </tr>
+  {%endfor%}
+</tbody>

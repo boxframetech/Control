@@ -1,0 +1,40 @@
+{%extends 'base_htmx.html'%}
+{% block main %}
+<div class="container-fluid">
+    <!-- {%include 'nav.html'%} -->
+
+    <!-- {%include 'searchform.html'%} -->
+    <a href='{%url 'student-add'%}' class='btn btn-success btn-sm'>Add new New</a>
+
+    <!-- <a hx-get='{%url 'journal-add'%}' hx-target='#formtarget' class='btn btn-success btn-sm'>Add new Journal</a> -->
+</div>
+
+<div class="col-md-12">
+    <div class="card"> <!-- id="formtarget"  hx-swap="outerHTML"-->
+      <div class="card-header">
+        <h4 class="card-title"> Students</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <tr>
+              <th>
+                Name
+              </th>
+              <th>
+               Phone
+              </th>
+              <th class="text-center">
+               Course
+              </th>
+            </tr></thead>
+            
+            {% include 'students/student_list.html'%}
+
+        </table>
+    </div>
+  </div>
+</div>
+</div>
+{%endblock%}

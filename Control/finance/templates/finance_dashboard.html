@@ -1,0 +1,126 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row" id="targetx">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <a hx-get='{%url 'debtor-list'%}' hx-target='#targetx'>
+          <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-user-run text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Debtors</p>
+                  <!-- <p class="card-title">150GB<p> -->
+                </div>
+              </div>
+            </div>
+          </a>  
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+            <a hx-get='{%url 'journal-list'%}' hx-target='#targetx'>
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-single-copy-04 text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Journal</p>
+                <!-- <p class="card-title">$ 1,345<p> -->
+              </div>
+            </div>
+          </div>
+            </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-delivery-fast text-danger"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Creditors</p>
+                <!-- <p class="card-title">23<p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-chart-bar-32 text-primary"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Petty Cash Transactions</p>
+                <!-- <p class="card-title">+45K<p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-briefcase-24 text-primary"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Petty Cash Withdrawal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-bullet-list-67 text-primary"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Weekly Projections</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+  </div>
+{%endblock%}

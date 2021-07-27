@@ -1,0 +1,93 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row" id="targetx">
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <a hx-get='{%url 'debtor-list'%}' hx-target='#targetx'>
+          <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-badge text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Space Users</p>
+                  <!-- <p class="card-title">150GB<p> -->
+                </div>
+              </div>
+            </div>
+          </a>  
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+            <a hx-get='{%url 'student-list'%}' hx-target='#targetx'>
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-ruler-pencil text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Students</p>
+                <!-- <p class="card-title">$ 1,345<p> -->
+              </div>
+            </div>
+          </div>
+            </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <a hx-get='{%url 'journal-list'%}' hx-target='#targetx'>
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-single-02 text-danger"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Facilitator</p>
+                <!-- <p class="card-title">23<p> -->
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div> 
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <a hx-get='{%url 'journal-list'%}' hx-target='#targetx'>
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-paper text-danger"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Documents and Files</p>
+                <!-- <p class="card-title">23<p> -->
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div> 
+  </div>
+{%endblock%}
